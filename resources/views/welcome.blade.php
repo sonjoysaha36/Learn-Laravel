@@ -41,6 +41,8 @@
                        <a href="{{ url('about') }}">About</a> 
                     </li>
                     <li class="list-item"><a href="{{ url('contact') }}">Contact</a></li>
+                    {{-- using name route --}}
+                    <li class="list-item"><a href="{{ route('address.us') }}">Address</a></li>
                 </ul>
             </div>
             

@@ -23,6 +23,13 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::get('/contact/{roll}', function ($roll) {
+    return "my roll id $roll";
+});
+// name routing
+Route::get('/addressdsfsasdfs', function () {
+    return view('address');
+})->name('address.us');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
