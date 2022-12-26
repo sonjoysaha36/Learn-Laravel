@@ -18,4 +18,18 @@ class FirstController extends Controller
         // dd(app());
         return view('contact');
     }
+
+    // student store
+    public function StudentStore(Request $request)
+    {
+        dd($request->all());
+    }
+    public function store(Request $request)
+    {   $validated = $request->validate([
+        'name' => 'required|max:55',
+        'email' => 'required|max:55',
+        'password' => 'required|min:6|max:10',
+    ]);
+        dd($request->all());
+    }
 }

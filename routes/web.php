@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\HTTP\Controllers\Example\FirstController;
+use App\HTTP\Controllers\LearnController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,11 @@ Route::get('/cuntry', function () {
 Route::get('/address', [FirstController::class, 'index'])->name('address.us');
 // })->name('address.us');
 
+Route::get('/test', LearnController::class);
+
+Route::POST('/store/contact', [FirstController::class, 'Store'])->name('store.contact');
+
+Route::POST('/student/store', [FirstController::class, 'StudentStore'])->name('student.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
